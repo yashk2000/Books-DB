@@ -17,18 +17,18 @@ class AdminFunctions extends JFrame {
         
         JButton BAddB, BAddC, BAddU, BRemoveB, BRemoveU, BRemoveC, BModifyB, BModifyC, BModifyU, BDisp, BLog ;
         BAddB = new JButton("Add a book");
-        BAddB.setBackground(Color.GREEN);
+        BAddB.setBackground(Color.YELLOW);
         BAddC = new JButton("Add a category");
-        BAddC.setBackground(Color.GREEN);
+        BAddC.setBackground(Color.YELLOW);
         BAddU = new JButton("Add a user");
-        BAddU.setBackground(Color.GREEN);
+        BAddU.setBackground(Color.YELLOW);
         
         BRemoveB = new JButton("Remove a book");
-        BRemoveB.setBackground(Color.RED);
+        BRemoveB.setBackground(Color.BLUE);
         BRemoveC = new JButton("Remove a category");
-        BRemoveC.setBackground(Color.RED);
+        BRemoveC.setBackground(Color.BLUE);
         BRemoveU = new JButton("Remove a user");
-        BRemoveU.setBackground(Color.RED);
+        BRemoveU.setBackground(Color.BLUE);
         
         BModifyB = new JButton("Edit Details of book");
         BModifyB.setBackground(Color.CYAN);

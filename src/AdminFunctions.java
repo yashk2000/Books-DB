@@ -1,15 +1,21 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.FlowLayout;
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
-import java.awt.event.*; 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 
 class AdminFunctions extends JFrame {
-	AdminFunctions() {
-		JFrame AFframe = new JFrame();
-		AFframe.setTitle("Login Successfull. Welcome");
+  AdminFunctions() {
+    JFrame AFframe = new JFrame();
+    AFframe.setTitle("Login Successfull. Welcome");
         AFframe.setLocationRelativeTo(null); 
-    	AFframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      AFframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         AFframe.setSize(500,500);  
         AFframe.setVisible(true);
         
@@ -17,18 +23,18 @@ class AdminFunctions extends JFrame {
         
         JButton BAddB, BAddC, BAddU, BRemoveB, BRemoveU, BRemoveC, BModifyB, BModifyC, BModifyU, BDisp, BLog ;
         BAddB = new JButton("Add a book");
-        BAddB.setBackground(Color.YELLOW);
+        BAddB.setBackground(Color.GREEN);
         BAddC = new JButton("Add a category");
-        BAddC.setBackground(Color.YELLOW);
+        BAddC.setBackground(Color.GREEN);
         BAddU = new JButton("Add a user");
-        BAddU.setBackground(Color.YELLOW);
+        BAddU.setBackground(Color.GREEN);
         
         BRemoveB = new JButton("Remove a book");
-        BRemoveB.setBackground(Color.BLUE);
+        BRemoveB.setBackground(Color.RED);
         BRemoveC = new JButton("Remove a category");
-        BRemoveC.setBackground(Color.BLUE);
+        BRemoveC.setBackground(Color.RED);
         BRemoveU = new JButton("Remove a user");
-        BRemoveU.setBackground(Color.BLUE);
+        BRemoveU.setBackground(Color.RED);
         
         BModifyB = new JButton("Edit Details of book");
         BModifyB.setBackground(Color.CYAN);
@@ -56,7 +62,66 @@ class AdminFunctions extends JFrame {
         p6.add(BDisp);
         p6.add(BLog);
         
-		AFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
-		AFframe.add(p6, BorderLayout.CENTER);
-	}
+    AFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
+    AFframe.add(p6, BorderLayout.CENTER);
+  }
+}
+
+class UserFunctions extends JFrame {
+  UserFunctions() {
+    JFrame UFframe = new JFrame();
+    UFframe.setTitle("Login Successful. Welcome");
+      UFframe.setSize(300,200);
+      UFframe.setLocationRelativeTo(null); 
+      UFframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    UFframe.setVisible(true);
+    
+    JPanel p7 = new JPanel(new GridLayout(1,3,10,10));
+    JPanel p8 = new JPanel(new GridLayout(1,2,10,10));
+
+    JButton BSearch, BBuy, BDisplay, BLogout, BExit;
+    BSearch = new JButton("Search");
+    BBuy = new JButton("Buy");
+    BDisplay = new JButton("Display");
+    BLogout = new JButton("Logout");
+    BExit = new JButton("Exit");
+
+    p7.add(BSearch);
+    p7.add(BBuy);
+    p7.add(BDisplay);
+
+    p8.add(BLogout);
+    p8.add(BExit);
+
+    BExit.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e3) {
+        System.exit(0);
+      }
+    });
+
+    BLogout.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e3) {
+        ULoginPage u = new ULoginPage();
+        UFframe.setVisible(false);
+      }
+    });
+
+    BSearch.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e3) {
+        UserSearchPage usp = new UserSearchPage();
+        UFframe.setVisible(false);
+      }
+    });
+
+    BDisplay.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e3) {
+        UserDisplayPage usp = new UserDisplayPage();
+        UFframe.setVisible(false);
+      }
+    });
+
+    UFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
+    UFframe.add(p7, BorderLayout.CENTER);
+    UFframe.add(p8, BorderLayout.SOUTH);
+  }
 }

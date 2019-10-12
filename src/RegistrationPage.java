@@ -1,27 +1,37 @@
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.event.*; 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 class RegistrationPage extends JFrame {
-	RegistrationPage() {
-		JFrame Rframe = new JFrame();
-		JPanel j = new JPanel(new GridLayout(7,2,5,5));
-		JLabel l1,l2,l3,l4,l5,l6;
-		l1 = new JLabel("Username");
-		l1.setBounds(20,50, 100,30); 
-		l2 = new JLabel("Password");
-		l2.setBounds(20, 100, 100, 30);
-		l3 = new JLabel("Gender");
-		l3.setBounds(20, 150, 100, 30);
-		l4 = new JLabel("Address");
-		l4.setBounds(20,250,100,30);
-		l5 = new JLabel("About you");
-		l5.setBounds(20,300,100,30);
-		l6 = new JLabel("Language Preference");
-		l6.setBounds(20,600,250,30);
-		
+  RegistrationPage() {
+    JFrame Rframe = new JFrame();
+    JPanel j = new JPanel(new GridLayout(7,2,5,5));
+    JLabel l1,l2,l3,l4,l5,l6;
+    l1 = new JLabel("Username");
+    l1.setBounds(20,50, 100,30); 
+    l2 = new JLabel("Password");
+    l2.setBounds(20, 100, 100, 30);
+    l3 = new JLabel("Gender");
+    l3.setBounds(20, 150, 100, 30);
+    l4 = new JLabel("Address");
+    l4.setBounds(20,250,100,30);
+    l5 = new JLabel("About you");
+    l5.setBounds(20,300,100,30);
+    l6 = new JLabel("Language Preference");
+    l6.setBounds(20,600,250,30);
+    
         JTextField t1,t2; 
         t1=new JTextField("Type your username");  
         t2=new JTextField("Fill your address");
@@ -40,25 +50,25 @@ class RegistrationPage extends JFrame {
         DSuccess.setLayout( new GridLayout() );  
         DCancel.setLayout(new FlowLayout());
         b1.addActionListener(new ActionListener(){  
-			public void actionPerformed(ActionEvent e1){  
-				DSuccess.setVisible(true); 
-				}  
-			});  
+      public void actionPerformed(ActionEvent e1){  
+        DSuccess.setVisible(true); 
+        }  
+      });  
         JButton b2=new JButton("Cancel");  
         b2.setBounds(200,700,95,30); 
         b2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e2) {
-				DCancel.setVisible(true);
-				}
-			});
+      public void actionPerformed(ActionEvent e2) {
+        DCancel.setVisible(true);
+        }
+      });
       
         JButton b3=new JButton("Exit");  
         b3.setBounds(350,700,95,30);
         b3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e3) {
-				System.exit(0);
-				}
-			});
+      public void actionPerformed(ActionEvent e3) {
+        System.exit(0);
+        }
+      });
        
         DSuccess.add( new JLabel ("You have registered successfully!!!"));  
         DSuccess.setSize(300,300); 
@@ -72,17 +82,17 @@ class RegistrationPage extends JFrame {
         
         j.add(l1);
         j.add(t1);
-		j.add(l2);
-		j.add(value); 
-		j.add(l3);
-		j.add(jcb1);
-		j.add(l4);
-		j.add(t2);
-		j.add(l5);
-		j.add(area); 
-		j.add(l6);
-		j.add(jcb2);
-		j.add(b1); 
+    j.add(l2);
+    j.add(value); 
+    j.add(l3);
+    j.add(jcb1);
+    j.add(l4);
+    j.add(t2);
+    j.add(l5);
+    j.add(area); 
+    j.add(l6);
+    j.add(jcb2);
+    j.add(b1); 
         j.add(b2);
         
         JPanel p5 = new JPanel(new BorderLayout());
@@ -93,8 +103,8 @@ class RegistrationPage extends JFrame {
         
         Rframe.setTitle("Registration Page");
         Rframe.setLocationRelativeTo(null); 
-    	Rframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      Rframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Rframe.setSize(500,500);  
         Rframe.setVisible(true);       
-	}
+  }
 }

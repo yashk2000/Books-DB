@@ -85,6 +85,13 @@ class AdminFunctions extends JFrame {
     		
     	}
     });
+    BModifyB.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    		EditBooks eb = new EditBooks();
+    		
+    	}
+    });
   }
 }
 

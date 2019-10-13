@@ -17,7 +17,6 @@ public class DisplayAll extends JFrame{
 		
 		JFrame displayall = new JFrame();
 		ArrayList myList = getBooks();
-		String column[]={"ID","NAME","SALARY"};   
 		BookTableModel tablemodel = new BookTableModel(myList);
 	
 

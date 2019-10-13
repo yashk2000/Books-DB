@@ -64,6 +64,27 @@ class AdminFunctions extends JFrame {
         
     AFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
     AFframe.add(p6, BorderLayout.CENTER);
+    
+    BDisp.addActionListener(new ActionListener(){
+    	 public void actionPerformed(ActionEvent e3) {
+    		 DisplayAll a = new DisplayAll();
+    	 }
+    	
+    });
+    BAddB.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    		AddBook a = new AddBook();
+    		
+    	}
+    });
+    BRemoveB.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    		RemoveBook b = new RemoveBook();
+    		
+    	}
+    });
   }
 }
 
@@ -119,6 +140,7 @@ class UserFunctions extends JFrame {
         UFframe.setVisible(false);
       }
     });
+     
 
     UFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
     UFframe.add(p7, BorderLayout.CENTER);

@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
-class MainWindow extends ALoginPage {
+class MainWindow {
   MainWindow() {
     JFrame Mframe = new JFrame();
     Mframe.setTitle("Welcome");

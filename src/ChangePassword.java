@@ -61,7 +61,7 @@ public class ChangePassword {
 			          Lframe.setVisible(false);
 			          Connection connection = DatabaseConnector.getConnection();
 			             String sql = "update user set password = \""+Tfpassword.getText()+"\" WHERE username = \""+Tfusername.getText()+"\";\n" + 
-			             		"";
+			     "";
 			             Statement statement;
 						try {
 							statement = connection.createStatement();

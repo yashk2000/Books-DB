@@ -20,7 +20,7 @@ class UserSearchPage extends JFrame {
 
     JPanel p9 = new JPanel(new GridLayout(1,1,10,10));
     JPanel p10 = new JPanel(new GridLayout(1,2,10,10));
-    JTextField LSearch = new JTextField("Enter a Book Name");
+    JTextField LSearch = new JTextField();
     JButton BUSearch, BUExit;
     BUSearch = new JButton("Search");
     BUExit = new JButton("Exit");
@@ -31,9 +31,16 @@ class UserSearchPage extends JFrame {
 
     BUExit.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e3) {
-        System.exit(0);
+        USPframe.setVisible(false);
+        UserFunctions user = new UserFunctions();
       }
     });
+    BUSearch.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e3) {
+            USPframe.setVisible(false);
+            SearchDisplay sdisplay = new SearchDisplay(LSearch.getText());
+          }
+        });
 
     USPframe.add(new JLabel("Enter a Book Name"),BorderLayout.NORTH);
     USPframe.add(p9,BorderLayout.CENTER);

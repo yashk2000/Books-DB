@@ -16,10 +16,10 @@ class AdminFunctions extends JFrame {
     AFframe.setTitle("Login Successfull. Welcome");
         AFframe.setLocationRelativeTo(null); 
       AFframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        AFframe.setSize(500,500);  
+        AFframe.setSize(700,500);  
         AFframe.setVisible(true);
         
-        JPanel p6 = new JPanel(new GridLayout(4,4,5,5));
+        JPanel p6 = new JPanel(new GridLayout(3,4,4,4));
         
         JButton BAddB, BAddC, BAddU, BRemoveB, BRemoveU, BRemoveC, BModifyB, BModifyC, BModifyU, BDisp, BLog,BDisplayU ;
         BAddB = new JButton("Add a book");
@@ -57,8 +57,6 @@ class AdminFunctions extends JFrame {
         
         p6.add(l1);
         p6.add(BAddB); p6.add(BRemoveB); p6.add(BModifyB);
-        p6.add(l2);
-        p6.add(BAddC); p6.add(BRemoveC); p6.add(BModifyC);
         p6.add(l3);
         p6.add(BAddU); p6.add(BRemoveU); p6.add(BModifyU);
         p6.add(BDisp);
@@ -119,6 +117,13 @@ class AdminFunctions extends JFrame {
     	public void actionPerformed(ActionEvent e4) {
     		AFframe.setVisible(false);
     	ChangePassword cp = new ChangePassword();
+    		
+    	}
+    });
+    BLog.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    		ALoginPage ul = new ALoginPage();
     		
     	}
     });

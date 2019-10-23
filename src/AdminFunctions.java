@@ -21,7 +21,7 @@ class AdminFunctions extends JFrame {
         
         JPanel p6 = new JPanel(new GridLayout(4,4,5,5));
         
-        JButton BAddB, BAddC, BAddU, BRemoveB, BRemoveU, BRemoveC, BModifyB, BModifyC, BModifyU, BDisp, BLog ;
+        JButton BAddB, BAddC, BAddU, BRemoveB, BRemoveU, BRemoveC, BModifyB, BModifyC, BModifyU, BDisp, BLog,BDisplayU ;
         BAddB = new JButton("Add a book");
         BAddB.setBackground(Color.GREEN);
         BAddC = new JButton("Add a category");
@@ -47,6 +47,8 @@ class AdminFunctions extends JFrame {
         BDisp.setBackground(Color.WHITE);
         BLog = new JButton("Logout");
         BLog.setBackground(Color.LIGHT_GRAY);
+        BDisplayU = new JButton("Display all User");
+        BDisplayU.setBackground(Color.DARK_GRAY);
         
         JLabel l1,l2,l3 ;
         l1 = new JLabel("Book:");
@@ -61,6 +63,7 @@ class AdminFunctions extends JFrame {
         p6.add(BAddU); p6.add(BRemoveU); p6.add(BModifyU);
         p6.add(BDisp);
         p6.add(BLog);
+        p6.add(BDisplayU);
         
     AFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
     AFframe.add(p6, BorderLayout.CENTER);
@@ -71,6 +74,12 @@ class AdminFunctions extends JFrame {
     	 }
     	
     });
+    BDisplayU.addActionListener(new ActionListener(){
+   	 public void actionPerformed(ActionEvent e3) {
+		 DisplayAllUsers a = new DisplayAllUsers();
+	 }
+	
+});
     BAddB.addActionListener(new ActionListener() {
     	public void actionPerformed(ActionEvent e4) {
     		AFframe.setVisible(false);
@@ -89,6 +98,27 @@ class AdminFunctions extends JFrame {
     	public void actionPerformed(ActionEvent e4) {
     		AFframe.setVisible(false);
     		EditBooks eb = new EditBooks();
+    		
+    	}
+    });
+    BAddU.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    		AddUser au = new AddUser();
+    		
+    	}
+    });
+    BRemoveU.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    		RemoveUser rm = new RemoveUser();
+    		
+    	}
+    });
+    BModifyU.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e4) {
+    		AFframe.setVisible(false);
+    	ChangePassword cp = new ChangePassword();
     		
     	}
     });

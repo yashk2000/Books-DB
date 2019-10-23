@@ -23,7 +23,7 @@ class ALoginPage extends JFrame {
     JLabel LUname, LPassword;
     LUname = new JLabel("Enter Username: "); 
     LPassword = new JLabel("Enter Password: ");
-    JTextField FUname = new JTextField("Type your username");
+    JTextField FUname = new JTextField();
     JPasswordField FPassword = new JPasswordField();
     p3.add(LUname);
     p3.add(FUname);

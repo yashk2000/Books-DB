@@ -180,7 +180,6 @@ class UserFunctions extends JFrame {
     BDisplay.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e3) {
         UserDisplayPage usp = new UserDisplayPage();
-        UFframe.setVisible(false);
       }
     });
     BBuy.addActionListener(new ActionListener() {

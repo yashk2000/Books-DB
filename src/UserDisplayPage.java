@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -25,6 +27,13 @@ class UserDisplayPage extends JFrame {
     
     UDPframe.add(p11,BorderLayout.CENTER);
     UDPframe.add(BUDisplay,BorderLayout.SOUTH);  
+    
+    BUDisplay.addActionListener(new ActionListener(){  
+        public void actionPerformed(ActionEvent e1){ 
+        	DisplayByCategory dc = new DisplayByCategory(genre.getSelectedItem().toString());
+       UDPframe.setVisible(false);
+    }  
+  });
   }
 }
     

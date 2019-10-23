@@ -158,7 +158,8 @@ class UserFunctions extends JFrame {
 
     BExit.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e3) {
-        System.exit(0);
+        MainWindow mw = new MainWindow();
+    	UFframe.setVisible(false);
       }
     });
 
@@ -182,6 +183,12 @@ class UserFunctions extends JFrame {
         UFframe.setVisible(false);
       }
     });
+    BBuy.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e3) {
+            BuyBook bb = new BuyBook();
+            UFframe.setVisible(false);
+          }
+        });
      
 
     UFframe.add(new JLabel("Choose a Function"), BorderLayout.NORTH);
